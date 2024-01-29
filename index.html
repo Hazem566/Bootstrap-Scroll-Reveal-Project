@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+
+    <!-- Link Bootstrap css file -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="./bootstrap-files/css/bootstrap.min.css"
+    />
+    <!-- Fontawsome CDN link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Bootstrap Scroll Reveal</title>
+    <!-- CSS style -->
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #111222;
+      }
+      html {
+        scroll-behavior: smooth;
+      }
+      img {
+        object-fit: cover;
+        border-radius: 1em;
+        max-width: 800px;
+        max-height: 400px;
+      }
+      section:not(:last-child) {
+        margin-bottom: 5rem;
+      }
+      section:not(:first-child) {
+        margin-top: 5rem;
+      }
+      section:nth-child(2) {
+        min-height: 100vh;
+      }
+      .text-box {
+        background-color: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border-radius: 0.7em;
+        height: min-content;
+        opacity: 0;
+        transform: translateX(-60%);
+      }
+      .titles {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      .images {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      .titles-show {
+        opacity: 1;
+        transition: all 1000ms ease;
+        transform: translateX(0);
+      }
+      .images-show {
+        opacity: 1;
+        transition: all 1000ms ease;
+        transform: translateX(0);
+      }
+      .text-boxs-show {
+        opacity: 1;
+        transition: all 1000ms ease;
+        transform: translateX(0);
+      }
+      @media screen and (min-width: 375px) {
+        body {
+          font-size: 12px;
+        }
+      }
+      @media screen and (min-width: 576px) {
+        body {
+          font-size: 14px;
+        }
+      }
+      @media screen and (min-width: 992px) {
+        body {
+          font-size: 16px;
+        }
+      }
+    </style>
+  </head>
+  <body class="text-light">
+    <!-- Section One -->
+    <section class="container-sm p-3 my-5">
+      <div class="">
+        <h1 class="fw-bold text-center titles">Section Title</h1>
+        <div class="row position-relative">
+          <div class="col-8 gy-5 images">
+            <img
+              src="./assets/pexels-davi-cordeiro-18138772.jpg"
+              alt="Section Image"
+              class="w-100 h-100"
+            />
+          </div>
+          <div
+            class="col-6 position-absolute text-box end-0 top-50 me-3 mt-4 p-3"
+          >
+            <h3 class="fs-4">Box Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              autem iusto ipsam repellendus distinctio commodi cum ea
+              voluptatibus voluptatem at accusamus obcaecati culpa quasi, illum
+              fugiat nulla animi consequatur iure debitis. Quis placeat minus
+              <span class="d-none d-lg-block">
+                libero asperiores, dolorum dolore maxime consectetur officiis
+                vero temporibus est veritatis! Aperiam maxime sed laborum, et
+                illo itaque eligendi nulla quos? Odit sequi accusamus sed alias.
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="mt-4 col-8 d-flex ms-5">
+          <ul class="list-unstyled">
+            <li class="my-4">
+              <a href="#" class="text-light fs-3"
+                ><i class="fa-brands fa-behance"></i
+              ></a>
+            </li>
+            <li class="my-4">
+              <a href="#" class="text-light fs-3"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li class="my-4">
+              <a href="#" class="text-light fs-3"
+                ><i class="fa-brands fa-linkedin-in"></i
+              ></a>
+            </li>
+            <li class="my-4">
+              <a href="#" class="text-light fs-3"
+                ><i class="fa-brands fa-stack-overflow"></i
+              ></a>
+            </li>
+            <li class="my-4">
+              <a href="#" class="text-light fs-3"
+                ><i class="fa-solid fa-inbox"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Two -->
+    <section class="my-5 pb-5 d-flex align-items-center">
+      <div class="container">
+        <h1 class="fw-bold text-center mb-5 titles">Section Title</h1>
+        <div class="row position-relative">
+          <div class="col-7 col-md-6 images">
+            <img
+              src="./assets/pexels-dcl-7891302.jpg"
+              alt="Section Image"
+              class="w-100 h-100"
+            />
+          </div>
+          <div
+            class="text-box col-5 col-md-6 position-absolute end-0 bottom-0 start-50 position-md-relative mb-md-5"
+          >
+            <h3 class="text__title">Box Title</h3>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+              autem iusto ipsam repellendus distinctio commodi cum ea
+              voluptatibus voluptatem at accusamus obcaecati culpa quasi, illum
+              fugiat nulla animi consequatur iure debitis. Quis placeat minus
+              <span class="d-none d-md-block">
+                libero asperiores, dolorum dolore maxime consectetur officiis
+                vero temporibus est veritatis! Aperiam maxime sed laborum, et
+                illo itaque eligendi nulla quos? Odit sequi accusamus sed alias.
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Three -->
+    <section class="mt-5">
+      <div class="container">
+        <h1 class="fw-bold text-center mt-5 titels">Section Title</h1>
+        <div class="row py-5 align-items-center justify-content-center">
+          <div class="col-2 d-grid justify-content-center">
+            <ul class="list-unstyled">
+              <li class="py-3">
+                <a href="#" class="fs-3 text-light"
+                  ><i class="fa-brands fa-behance"></i
+                ></a>
+              </li>
+              <li class="py-3">
+                <a href="#" class="fs-3 text-light"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </li>
+              <li class="py-3">
+                <a href="#" class="fs-3 text-light"
+                  ><i class="fa-brands fa-linkedin-in"></i
+                ></a>
+              </li>
+              <li class="py-3">
+                <a href="#" class="fs-3 text-light"
+                  ><i class="fa-brands fa-stack-overflow"></i
+                ></a>
+              </li>
+              <li class="py-3">
+                <a href="#" class="fs-3 text-light"
+                  ><i class="fa-solid fa-inbox"></i
+                ></a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-8 images">
+            <img
+              src="./assets/pexels-pexels-user-19752127.jpg"
+              alt="Section Image"
+              class="w-100 h-100"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+      /*titles-show images-show text-boxs-show*/
+      const titles = document.querySelectorAll('.titles');
+      const images = document.querySelectorAll('.images');
+      const textBoxs = document.querySelectorAll('.text-box');
+
+      const titlesObserver = new IntersectionObserver( (titels) => {
+        titels.forEach( title => {
+            title.target.classList.toggle('titles-show', title.isIntersecting);
+        })
+      });
+      titles.forEach( title => {
+        titlesObserver.observe(title);
+      });
+      const imagesObserver = new IntersectionObserver( images => {
+        images.forEach( image => {
+            image.target.classList.toggle('images-show', image.isIntersecting);
+        });
+      });
+      images.forEach( image => {
+        imagesObserver.observe(image);
+      });
+      const textBoxsObserver = new IntersectionObserver( boxs =>  {
+        boxs.forEach( box => {
+            box.target.classList.toggle('text-boxs-show', box.isIntersecting);
+        });
+      });
+      textBoxs.forEach( box => {
+        textBoxsObserver.observe(box);
+      });
+    </script>
+  </body>
+</html>
